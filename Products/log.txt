@@ -1,0 +1,1042 @@
+2025-02-06 16:55:52.211 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-06 16:55:52.416 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-06 16:55:52.439 +05:30 [INF] Hosting environment: Development
+2025-02-06 16:55:52.439 +05:30 [INF] Content root path: C:\Users\AGupta\Products\Products
+2025-02-06 16:55:52.868 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 683.1064ms
+2025-02-06 16:55:52.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-06 16:55:52.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-06 16:55:52.912 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-06 16:55:52.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 5.4552ms
+2025-02-06 16:55:52.931 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 19.3231ms
+2025-02-06 16:55:53.220 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 308.7237ms
+2025-02-06 16:55:53.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-06 16:55:53.310 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.3171ms
+2025-02-06 16:56:10.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-06 16:56:10.101 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 16:56:10.146 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-06 16:56:10.879 +05:30 [INF] Executing action method Products.Controllers.ProductsController.GetAllProducts (Products) - Validation state: "Valid"
+2025-02-06 16:56:11.751 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-06 16:56:13.210 +05:30 [ERR] An error occurred using the connection to database '' on server ''.
+2025-02-06 16:56:13.246 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Products.Database.DataContext.AppDbContext'.
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-02-06 16:56:13.343 +05:30 [ERR] An error occurred while fetching all products
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Products.Infrastructure.Repositories.ProductRepository.GetAllProductsAsync() in C:\Users\AGupta\Products\Products.Infrastructure\Repositories\ProductRepository.cs:line 27
+2025-02-06 16:56:13.615 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 3459.8337ms
+2025-02-06 16:56:13.619 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 16:56:13.667 +05:30 [ERR] An unhandled exception occurred
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Products.Infrastructure.Repositories.ProductRepository.GetAllProductsAsync() in C:\Users\AGupta\Products\Products.Infrastructure\Repositories\ProductRepository.cs:line 27
+   at Products.Application.Services.ProductService.GetAllProductsAsync() in C:\Users\AGupta\Products\Products.Application\Services\ProductService.cs:line 23
+   at Products.Controllers.ProductsController.GetAllProducts() in C:\Users\AGupta\Products\Products\Controllers\ProductsController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Products.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\AGupta\Products\Products\Middleware\ExceptionHandlingMiddleware.cs:line 20
+2025-02-06 16:56:13.758 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 500 null application/json; charset=utf-8 3674.6348ms
+2025-02-06 23:07:14.602 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/ - null null
+2025-02-06 23:07:14.799 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-06 23:07:14.846 +05:30 [INF] Hosting environment: Development
+2025-02-06 23:07:14.846 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-06 23:07:18.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-06 23:07:18.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/ - 301 null null 3598.2035ms
+2025-02-06 23:07:18.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 215.5333ms
+2025-02-06 23:07:18.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger-ui.css - null null
+2025-02-06 23:07:18.398 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-06 23:07:18.398 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-06 23:07:18.408 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger-ui-standalone-preset.js - null null
+2025-02-06 23:07:18.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger-ui-bundle.js - null null
+2025-02-06 23:07:18.435 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 36.7415ms
+2025-02-06 23:07:18.439 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-06 23:07:18.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 42.4782ms
+2025-02-06 23:07:18.460 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.css - null null
+2025-02-06 23:07:18.520 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-06 23:07:18.520 +05:30 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-02-06 23:07:18.520 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-06 23:07:18.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.css - 200 202 text/css 61.4389ms
+2025-02-06 23:07:18.525 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger-ui.css - 200 152035 text/css 137.8592ms
+2025-02-06 23:07:18.525 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-06 23:07:18.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger-ui-standalone-preset.js - 200 230007 text/javascript 123.5797ms
+2025-02-06 23:07:18.581 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger-ui-bundle.js - 200 1426050 text/javascript 166.0414ms
+2025-02-06 23:07:18.692 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 254.2201ms
+2025-02-06 23:07:18.867 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-06 23:07:18.892 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.9048ms
+2025-02-06 23:07:18.897 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/favicon-32x32.png - null null
+2025-02-06 23:07:18.898 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-02-06 23:07:18.899 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/favicon-32x32.png - 200 628 image/png 2.4137ms
+2025-02-06 23:08:02.866 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-06 23:08:02.892 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:08:02.951 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-06 23:08:04.647 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-06 23:08:06.584 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-06 23:08:06.700 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-06 23:08:06.744 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 3779.7719ms
+2025-02-06 23:08:06.746 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:08:06.765 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 3898.9603ms
+2025-02-06 23:08:51.387 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 240
+2025-02-06 23:08:51.389 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-06 23:08:51.426 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-06 23:08:51.956 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]
+        WHERE [p].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-06 23:08:52.401 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-02-06 23:08:52.417 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-06 23:08:52.474 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 1047.5447ms
+2025-02-06 23:08:52.474 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-06 23:08:52.475 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 1088.1496ms
+2025-02-06 23:09:03.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-06 23:09:03.192 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:09:03.192 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-06 23:09:03.342 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-06 23:09:03.356 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-06 23:09:03.357 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 164.3541ms
+2025-02-06 23:09:03.357 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:09:03.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 168.6064ms
+2025-02-06 23:16:57.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-06 23:16:57.225 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-06 23:16:57.242 +05:30 [INF] Hosting environment: Development
+2025-02-06 23:16:57.243 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-06 23:16:57.499 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 449.9916ms
+2025-02-06 23:16:57.509 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-06 23:16:57.517 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 8.3174ms
+2025-02-06 23:16:57.540 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-06 23:16:57.548 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.3891ms
+2025-02-06 23:16:57.559 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-06 23:16:57.625 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.4141ms
+2025-02-06 23:16:57.884 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-06 23:16:57.932 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.8691ms
+2025-02-06 23:17:23.868 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-06 23:17:23.901 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:17:23.955 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-06 23:17:25.894 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-06 23:17:28.914 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-06 23:17:29.090 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-06 23:17:29.158 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 5193.3809ms
+2025-02-06 23:17:29.160 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:17:29.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 5323.4601ms
+2025-02-06 23:34:13.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-06 23:34:13.730 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-06 23:34:13.758 +05:30 [INF] Hosting environment: Development
+2025-02-06 23:34:13.759 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-06 23:34:14.208 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-06 23:34:14.208 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-06 23:34:14.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-06 23:34:14.217 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 8.1311ms
+2025-02-06 23:34:14.213 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 753.5463ms
+2025-02-06 23:34:14.228 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 40.0076ms
+2025-02-06 23:34:14.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.1369ms
+2025-02-06 23:34:14.388 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-06 23:34:14.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.7983ms
+2025-02-06 23:34:39.988 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-06 23:34:40.016 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:34:40.068 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-06 23:34:41.802 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-06 23:34:45.067 +05:30 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-06 23:34:45.395 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-06 23:34:45.455 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 5373.0928ms
+2025-02-06 23:34:45.457 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-06 23:34:45.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 5490.0776ms
+2025-02-07 09:42:08.844 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 09:42:08.931 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 09:42:08.951 +05:30 [INF] Hosting environment: Development
+2025-02-07 09:42:08.952 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 09:42:09.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 09:42:09.141 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 09:42:09.141 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 09:42:09.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 304.5935ms
+2025-02-07 09:42:09.165 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 14.1867ms
+2025-02-07 09:42:09.206 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 65.36ms
+2025-02-07 09:42:09.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.3562ms
+2025-02-07 09:42:09.319 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 09:42:09.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.0367ms
+2025-02-07 09:42:34.800 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 09:42:34.822 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:42:34.853 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:42:35.487 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 09:42:36.204 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 09:42:36.253 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 09:42:36.267 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 1409.4809ms
+2025-02-07 09:42:36.267 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:42:36.276 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 1476.2121ms
+2025-02-07 09:42:50.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products/1 - null null
+2025-02-07 09:42:50.759 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 09:42:50.770 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:42:50.930 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__id_0
+2025-02-07 09:42:50.935 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-07 09:42:50.953 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetProductById (Products) in 182.7522ms
+2025-02-07 09:42:50.953 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 09:42:50.954 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products/1 - 404 null application/problem+json; charset=utf-8 200.5685ms
+2025-02-07 09:43:07.529 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/1 - application/json 217
+2025-02-07 09:43:07.533 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 09:43:07.539 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:43:07.576 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-07 09:43:07.577 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 37.9135ms
+2025-02-07 09:43:07.577 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 09:43:07.578 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/1 - 400 null application/problem+json; charset=utf-8 48.6992ms
+2025-02-07 09:43:39.361 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 217
+2025-02-07 09:43:39.361 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:43:39.370 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:43:39.586 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-02-07 09:43:39.606 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 09:43:39.629 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 258.6361ms
+2025-02-07 09:43:39.629 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:43:39.630 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 269.6941ms
+2025-02-07 09:43:50.414 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 09:43:50.415 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:43:50.415 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:43:50.423 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 09:43:50.435 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 09:43:50.435 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 19.667ms
+2025-02-07 09:43:50.436 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:43:50.437 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 23.2728ms
+2025-02-07 09:44:54.159 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 217
+2025-02-07 09:44:54.168 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:44:54.168 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:44:54.203 +05:30 [ERR] Failed executing DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-02-07 09:44:54.233 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Products.Database.DataContext.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Products'. Cannot insert duplicate key in object 'dbo.Products'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:82014ecf-7192-4cd5-b2c6-f16ee8055f62
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Products'. Cannot insert duplicate key in object 'dbo.Products'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:82014ecf-7192-4cd5-b2c6-f16ee8055f62
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-02-07 09:44:54.363 +05:30 [ERR] An error occurred while adding a product
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Products'. Cannot insert duplicate key in object 'dbo.Products'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:82014ecf-7192-4cd5-b2c6-f16ee8055f62
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Products.Infrastructure.Repositories.ProductRepository.AddProductAsync(Product product) in C:\Users\Admin\Downloads\Products (1)\Products\Products.Infrastructure\Repositories\ProductRepository.cs:line 75
+2025-02-07 09:44:54.541 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 372.6439ms
+2025-02-07 09:44:54.542 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:44:54.657 +05:30 [ERR] An invalid operation occurred
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Products'. Cannot insert duplicate key in object 'dbo.Products'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:82014ecf-7192-4cd5-b2c6-f16ee8055f62
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Products.Infrastructure.Repositories.ProductRepository.AddProductAsync(Product product) in C:\Users\Admin\Downloads\Products (1)\Products\Products.Infrastructure\Repositories\ProductRepository.cs:line 75
+   at Products.Application.Services.ProductService.CreateProductAsync(ProductDTO productDto) in C:\Users\Admin\Downloads\Products (1)\Products\Products.Application\Services\ProductService.cs:line 47
+   at Products.Controllers.ProductsController.CreateProduct(ProductDTO product) in C:\Users\Admin\Downloads\Products (1)\Products\Products\Controllers\ProductsController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Products.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\Downloads\Products (1)\Products\Products\Middleware\ExceptionHandlingMiddleware.cs:line 24
+2025-02-07 09:44:54.698 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/json; charset=utf-8 538.5646ms
+2025-02-07 09:45:03.176 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 217
+2025-02-07 09:45:03.177 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:45:03.177 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:45:03.185 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-02-07 09:45:03.187 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 09:45:03.188 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 11.01ms
+2025-02-07 09:45:03.190 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:45:03.192 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 15.4879ms
+2025-02-07 09:53:04.526 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 09:53:04.671 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 09:53:04.678 +05:30 [INF] Hosting environment: Development
+2025-02-07 09:53:04.678 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 09:53:04.821 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 306.6051ms
+2025-02-07 09:53:04.828 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 09:53:04.834 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 6.1831ms
+2025-02-07 09:53:04.856 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 09:53:04.859 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 09:53:04.862 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.0194ms
+2025-02-07 09:53:04.909 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.5939ms
+2025-02-07 09:53:04.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 09:53:05.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4987ms
+2025-02-07 09:53:36.125 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 217
+2025-02-07 09:53:36.147 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:53:36.174 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:53:36.774 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 09:53:37.381 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-02-07 09:53:37.435 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 09:53:37.458 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 1280.1738ms
+2025-02-07 09:53:37.459 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:53:37.466 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 1340.7043ms
+2025-02-07 09:54:26.100 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 09:54:26.102 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:54:26.106 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:54:26.400 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 09:54:26.424 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 09:54:26.426 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 319.7615ms
+2025-02-07 09:54:26.426 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:54:26.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 326.6476ms
+2025-02-07 09:55:34.765 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 216
+2025-02-07 09:55:34.792 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:55:34.794 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:55:34.826 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-02-07 09:55:34.827 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 09:55:34.828 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 34.5355ms
+2025-02-07 09:55:34.829 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 09:55:34.829 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 64.4927ms
+2025-02-07 09:55:41.354 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 09:55:41.355 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:55:41.355 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 09:55:41.364 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 09:55:41.365 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 09:55:41.366 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 10.4822ms
+2025-02-07 09:55:41.366 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 09:55:41.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 12.5145ms
+2025-02-07 10:13:55.095 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 10:13:55.182 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 10:13:55.198 +05:30 [INF] Hosting environment: Development
+2025-02-07 10:13:55.199 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 10:13:55.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 283.31ms
+2025-02-07 10:13:55.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 10:13:55.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 10:13:55.388 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 10:13:55.395 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 5.6608ms
+2025-02-07 10:13:55.401 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.8298ms
+2025-02-07 10:13:55.438 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.4212ms
+2025-02-07 10:13:55.507 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 10:13:55.525 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3482ms
+2025-02-07 10:14:02.444 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 227
+2025-02-07 10:14:02.453 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:14:02.476 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:14:03.035 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-02-07 10:14:03.060 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 579.8278ms
+2025-02-07 10:14:03.060 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:14:03.063 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/problem+json; charset=utf-8 619.2383ms
+2025-02-07 10:23:39.300 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 10:23:39.424 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 10:23:39.441 +05:30 [INF] Hosting environment: Development
+2025-02-07 10:23:39.442 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 10:23:39.652 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 368.472ms
+2025-02-07 10:23:39.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 10:23:39.686 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 7.5946ms
+2025-02-07 10:23:39.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 10:23:39.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 10:23:39.712 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.9703ms
+2025-02-07 10:23:39.756 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.0148ms
+2025-02-07 10:23:39.862 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 10:23:39.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.6575ms
+2025-02-07 10:25:06.994 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:25:07.006 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:25:07.036 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:25:07.970 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 10:25:09.435 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:25:09.539 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:25:09.562 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 2520.3703ms
+2025-02-07 10:25:09.563 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:25:09.576 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 2582.0183ms
+2025-02-07 10:25:27.683 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 212
+2025-02-07 10:25:27.684 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:27.697 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.IProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:25:27.730 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 32.8485ms
+2025-02-07 10:25:27.731 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:27.803 +05:30 [ERR] An invalid operation occurred
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Products.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\Downloads\Products (1)\Products\Products\Middleware\ExceptionHandlingMiddleware.cs:line 24
+2025-02-07 10:25:27.920 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/json; charset=utf-8 236.515ms
+2025-02-07 10:25:41.033 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 212
+2025-02-07 10:25:41.036 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:41.037 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.IProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:25:41.043 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 6.5598ms
+2025-02-07 10:25:41.044 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:41.070 +05:30 [ERR] An invalid operation occurred
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Products.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\Downloads\Products (1)\Products\Products\Middleware\ExceptionHandlingMiddleware.cs:line 24
+2025-02-07 10:25:41.072 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/json; charset=utf-8 39.2821ms
+2025-02-07 10:25:53.506 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 212
+2025-02-07 10:25:53.509 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:53.510 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.IProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:25:53.515 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 4.3607ms
+2025-02-07 10:25:53.515 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:25:53.542 +05:30 [ERR] An invalid operation occurred
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Products.Domain.DTOs.IProductDTO'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_DeserializeNoConstructor(JsonTypeInfo typeInfo, Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Products.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\Downloads\Products (1)\Products\Products\Middleware\ExceptionHandlingMiddleware.cs:line 24
+2025-02-07 10:25:53.546 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/json; charset=utf-8 40.687ms
+2025-02-07 10:26:18.439 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 212
+2025-02-07 10:26:18.439 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:26:18.442 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.IProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:26:18.446 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 4.0589ms
+2025-02-07 10:26:18.447 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:44:20.312 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 10:44:20.495 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 10:44:20.519 +05:30 [INF] Hosting environment: Development
+2025-02-07 10:44:20.519 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 10:44:21.137 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 10:44:21.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 10:44:21.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 10:44:21.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 827.5338ms
+2025-02-07 10:44:21.143 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 4.6105ms
+2025-02-07 10:44:21.144 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 13.658ms
+2025-02-07 10:44:21.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 116.0176ms
+2025-02-07 10:44:21.362 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 10:44:21.388 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.6834ms
+2025-02-07 10:44:43.281 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:44:43.293 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:44:43.321 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:44:44.316 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 10:44:46.003 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:44:46.134 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:44:46.165 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 2839.6624ms
+2025-02-07 10:44:46.166 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:44:46.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 2896.4043ms
+2025-02-07 10:45:00.751 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 206
+2025-02-07 10:45:00.753 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:45:00.764 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:45:00.872 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-02-07 10:45:00.894 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 130.7293ms
+2025-02-07 10:45:00.895 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:45:00.895 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 400 null application/problem+json; charset=utf-8 143.9226ms
+2025-02-07 10:45:07.977 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 206
+2025-02-07 10:45:07.979 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:45:07.980 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:45:08.179 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-02-07 10:45:08.202 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.Entities.Product'.
+2025-02-07 10:45:08.219 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 238.7638ms
+2025-02-07 10:45:08.219 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 10:45:08.219 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 242.4788ms
+2025-02-07 10:45:21.358 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:45:21.359 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:45:21.359 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:45:21.429 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:45:21.430 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:45:21.431 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 71.4236ms
+2025-02-07 10:45:21.431 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:45:21.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 73.4425ms
+2025-02-07 10:45:40.800 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products/3 - null null
+2025-02-07 10:45:40.805 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 10:45:40.811 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:45:40.937 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__id_0
+2025-02-07 10:45:40.940 +05:30 [INF] Executing OkObjectResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 10:45:40.941 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetProductById (Products) in 130.0285ms
+2025-02-07 10:45:40.941 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 10:45:40.941 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products/3 - 200 null application/json; charset=utf-8 142.3834ms
+2025-02-07 10:46:07.707 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/3 - application/json 205
+2025-02-07 10:46:07.710 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 10:46:07.717 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:46:07.748 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-02-07 10:46:07.751 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-07 10:46:07.751 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 34.389ms
+2025-02-07 10:46:07.751 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 10:46:07.752 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/3 - 204 null null 47.3948ms
+2025-02-07 10:46:15.910 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products/3 - null null
+2025-02-07 10:46:15.911 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 10:46:15.911 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:46:15.912 +05:30 [INF] Executing OkObjectResult, writing value of type 'Products.Domain.DTOs.ProductDTO'.
+2025-02-07 10:46:15.913 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetProductById (Products) in 2.0858ms
+2025-02-07 10:46:15.914 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetProductById (Products)'
+2025-02-07 10:46:15.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products/3 - 200 null application/json; charset=utf-8 4.3903ms
+2025-02-07 10:46:28.706 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:46:28.707 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:46:28.707 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:46:28.727 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:46:28.728 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:46:28.728 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 21.5914ms
+2025-02-07 10:46:28.729 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:46:28.729 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 23.3218ms
+2025-02-07 10:46:50.682 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:44398/api/Products/3 - null null
+2025-02-07 10:46:50.682 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.DeleteProduct (Products)'
+2025-02-07 10:46:50.686 +05:30 [INF] Route matched with {action = "DeleteProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:46:50.736 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-02-07 10:46:50.790 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Products]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-02-07 10:46:50.794 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-07 10:46:50.794 +05:30 [INF] Executed action Products.Controllers.ProductsController.DeleteProduct (Products) in 108.1263ms
+2025-02-07 10:46:50.794 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.DeleteProduct (Products)'
+2025-02-07 10:46:50.794 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:44398/api/Products/3 - 204 null null 112.7224ms
+2025-02-07 10:46:59.986 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:46:59.986 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:46:59.987 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:47:00.006 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:47:00.008 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:47:00.009 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 22.1224ms
+2025-02-07 10:47:00.009 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:47:00.010 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 24.1517ms
+2025-02-07 10:47:34.953 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/add-to-stock/4/1 - null 0
+2025-02-07 10:47:34.953 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.AddToStock (Products)'
+2025-02-07 10:47:34.961 +05:30 [INF] Route matched with {action = "AddToStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddToStock(Int32, Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:47:34.984 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-02-07 10:47:34.992 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [StockAvailable] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-02-07 10:47:34.992 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-07 10:47:34.993 +05:30 [INF] Executed action Products.Controllers.ProductsController.AddToStock (Products) in 32.1974ms
+2025-02-07 10:47:34.993 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.AddToStock (Products)'
+2025-02-07 10:47:34.993 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/add-to-stock/4/1 - 200 null text/plain; charset=utf-8 40.5824ms
+2025-02-07 10:47:45.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:47:45.758 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:47:45.759 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:47:45.764 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:47:45.767 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:47:45.768 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 9.6516ms
+2025-02-07 10:47:45.769 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:47:45.770 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 11.8015ms
+2025-02-07 10:48:04.620 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/decrement-stock/2/2 - null 0
+2025-02-07 10:48:04.621 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.DecrementStock (Products)'
+2025-02-07 10:48:04.626 +05:30 [INF] Route matched with {action = "DecrementStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecrementStock(Int32, Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:48:04.647 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-02-07 10:48:04.648 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-07 10:48:04.649 +05:30 [INF] Executed action Products.Controllers.ProductsController.DecrementStock (Products) in 22.2175ms
+2025-02-07 10:48:04.649 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.DecrementStock (Products)'
+2025-02-07 10:48:04.649 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/decrement-stock/2/2 - 400 null text/plain; charset=utf-8 29.3018ms
+2025-02-07 10:48:17.339 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/add-to-stock/2/3 - null 0
+2025-02-07 10:48:17.339 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.AddToStock (Products)'
+2025-02-07 10:48:17.339 +05:30 [INF] Route matched with {action = "AddToStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddToStock(Int32, Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:48:17.345 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-02-07 10:48:17.363 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [StockAvailable] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-02-07 10:48:17.363 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-07 10:48:17.364 +05:30 [INF] Executed action Products.Controllers.ProductsController.AddToStock (Products) in 24.5334ms
+2025-02-07 10:48:17.364 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.AddToStock (Products)'
+2025-02-07 10:48:17.364 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/add-to-stock/2/3 - 200 null text/plain; charset=utf-8 25.8255ms
+2025-02-07 10:48:26.051 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:48:26.052 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:48:26.052 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:48:26.056 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:48:26.066 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:48:26.070 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 17.6015ms
+2025-02-07 10:48:26.070 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:48:26.071 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 19.4479ms
+2025-02-07 10:49:02.871 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:49:02.871 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:49:02.872 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:49:02.887 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:49:02.889 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:49:02.890 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 17.9756ms
+2025-02-07 10:49:02.890 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:49:02.890 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 19.1197ms
+2025-02-07 10:49:16.831 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/decrement-stock/2/2 - null 0
+2025-02-07 10:49:16.832 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.DecrementStock (Products)'
+2025-02-07 10:49:16.832 +05:30 [INF] Route matched with {action = "DecrementStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecrementStock(Int32, Int32) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:49:16.839 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-02-07 10:49:16.859 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [StockAvailable] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-02-07 10:49:16.860 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-07 10:49:16.861 +05:30 [INF] Executed action Products.Controllers.ProductsController.DecrementStock (Products) in 28.4099ms
+2025-02-07 10:49:16.861 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.DecrementStock (Products)'
+2025-02-07 10:49:16.861 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/decrement-stock/2/2 - 200 null text/plain; charset=utf-8 29.8716ms
+2025-02-07 10:49:22.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:49:22.278 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:49:22.278 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:49:22.282 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:49:22.284 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:49:22.293 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 13.7552ms
+2025-02-07 10:49:22.293 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:49:22.295 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 17.5704ms
+2025-02-07 10:56:59.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 10:56:59.555 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 10:56:59.574 +05:30 [INF] Hosting environment: Development
+2025-02-07 10:56:59.575 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 10:56:59.774 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 331.8595ms
+2025-02-07 10:56:59.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 10:56:59.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 10:56:59.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 10:56:59.804 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 7.5142ms
+2025-02-07 10:56:59.808 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 12.3885ms
+2025-02-07 10:56:59.862 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.5488ms
+2025-02-07 10:57:00.018 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 10:57:00.083 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 64.7476ms
+2025-02-07 10:57:04.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 10:57:04.738 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:57:04.768 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:57:05.326 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 10:57:05.992 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 10:57:06.104 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 10:57:06.128 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 1355.7492ms
+2025-02-07 10:57:06.128 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 10:57:06.136 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 1409.4451ms
+2025-02-07 10:57:44.972 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 227
+2025-02-07 10:57:44.986 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 10:57:45.006 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 10:57:45.254 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[ProductId] = @__id_0
+2025-02-07 10:57:45.299 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[ProductId] = @__p_0
+2025-02-07 10:57:45.300 +05:30 [WRN] Product with ID 0 not found.
+2025-02-07 10:57:45.302 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-07 10:57:45.302 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 296.2995ms
+2025-02-07 10:57:45.303 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 10:57:45.304 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/4 - 204 null null 331.885ms
+2025-02-07 10:58:37.838 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 227
+2025-02-07 10:58:37.851 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 10:58:37.851 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:02:19.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 11:02:19.308 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 11:02:19.321 +05:30 [INF] Hosting environment: Development
+2025-02-07 11:02:19.322 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 11:02:19.461 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 257.6227ms
+2025-02-07 11:02:19.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 11:02:19.485 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 13.3828ms
+2025-02-07 11:02:19.512 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 11:02:19.512 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 11:02:19.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.0691ms
+2025-02-07 11:02:19.559 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.7231ms
+2025-02-07 11:02:19.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 11:02:19.922 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.9599ms
+2025-02-07 11:03:03.796 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 11:03:03.805 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:03:03.827 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:03:04.423 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 11:03:05.182 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 11:03:05.286 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:03:05.308 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 1478.3071ms
+2025-02-07 11:03:05.309 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:03:05.319 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 1523.534ms
+2025-02-07 11:03:21.937 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 227
+2025-02-07 11:03:21.943 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:03:21.952 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:04:08.059 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-07 11:04:08.089 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 46136.5723ms
+2025-02-07 11:04:08.089 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:04:08.089 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/4 - 400 null application/problem+json; charset=utf-8 46152.2717ms
+2025-02-07 11:04:26.540 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 244
+2025-02-07 11:04:26.542 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:04:26.543 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:04:49.103 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-07 11:04:49.114 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 22571.7622ms
+2025-02-07 11:04:49.115 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:04:49.115 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/4 - 400 null application/problem+json; charset=utf-8 22575.5724ms
+2025-02-07 11:04:59.373 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 244
+2025-02-07 11:04:59.373 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:04:59.373 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:05:26.769 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 11:05:26.891 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 11:05:26.905 +05:30 [INF] Hosting environment: Development
+2025-02-07 11:05:26.905 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 11:05:27.050 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 297.6141ms
+2025-02-07 11:05:27.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 11:05:27.057 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 11:05:27.058 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 11:05:27.064 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 7.1909ms
+2025-02-07 11:05:27.077 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.0657ms
+2025-02-07 11:05:27.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.104ms
+2025-02-07 11:05:27.296 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 11:05:27.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.9798ms
+2025-02-07 11:05:35.135 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 11:05:35.149 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:05:35.169 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:05:35.687 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 11:05:36.376 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 11:05:36.489 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:05:36.512 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 1339.4485ms
+2025-02-07 11:05:36.512 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:05:36.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 1389.3756ms
+2025-02-07 11:06:00.429 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44398/api/Products/4 - application/json 247
+2025-02-07 11:06:00.442 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:06:00.459 +05:30 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(Int32, Products.Domain.DTOs.ProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:06:25.713 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[ProductId] = @__p_0
+2025-02-07 11:06:37.138 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [Name] = @p0, [StockAvailable] = @p1
+OUTPUT 1
+WHERE [ProductId] = @p2;
+2025-02-07 11:06:39.913 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-07 11:06:39.914 +05:30 [INF] Executed action Products.Controllers.ProductsController.UpdateProduct (Products) in 39454.3458ms
+2025-02-07 11:06:39.914 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.UpdateProduct (Products)'
+2025-02-07 11:06:39.915 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44398/api/Products/4 - 204 null null 39486.8227ms
+2025-02-07 11:06:48.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 11:06:48.249 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:06:48.250 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:06:48.339 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 11:06:48.343 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:06:48.345 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 94.5391ms
+2025-02-07 11:06:48.345 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:06:48.345 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 99.7567ms
+2025-02-07 11:11:19.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.html - null null
+2025-02-07 11:11:19.585 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 11:11:19.604 +05:30 [INF] Hosting environment: Development
+2025-02-07 11:11:19.604 +05:30 [INF] Content root path: C:\Users\Admin\Downloads\Products (1)\Products\Products
+2025-02-07 11:11:19.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 11:11:19.788 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/_vs/browserLink - null null
+2025-02-07 11:11:19.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 11.2407ms
+2025-02-07 11:11:19.802 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/index.js - null null
+2025-02-07 11:11:19.781 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.html - 200 null text/html;charset=utf-8 350.5718ms
+2025-02-07 11:11:19.824 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/index.js - 200 null application/javascript;charset=utf-8 25.6749ms
+2025-02-07 11:11:19.869 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.6271ms
+2025-02-07 11:11:19.958 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - null null
+2025-02-07 11:11:20.038 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.1919ms
+2025-02-07 11:11:27.439 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44398/api/Products - null null
+2025-02-07 11:11:27.446 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:11:27.470 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:11:28.304 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-02-07 11:11:29.675 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[Category], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockAvailable], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-02-07 11:11:29.773 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Products.Domain.DTOs.ProductDTO, Products.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-07 11:11:29.792 +05:30 [INF] Executed action Products.Controllers.ProductsController.GetAllProducts (Products) in 2318.4671ms
+2025-02-07 11:11:29.792 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.GetAllProducts (Products)'
+2025-02-07 11:11:29.801 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44398/api/Products - 200 null application/json; charset=utf-8 2362.3527ms
+2025-02-07 11:11:40.657 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44398/api/Products - application/json 216
+2025-02-07 11:11:40.659 +05:30 [INF] Executing endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 11:11:40.673 +05:30 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Products.Domain.DTOs.CreateProductDTO) on controller Products.Controllers.ProductsController (Products).
+2025-02-07 11:11:40.948 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category], [CreatedAt], [Description], [IsActive], [Name], [Price], [StockAvailable], [UpdatedAt])
+OUTPUT INSERTED.[ProductId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-02-07 11:11:40.976 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Products.Domain.Entities.Product'.
+2025-02-07 11:11:40.994 +05:30 [INF] Executed action Products.Controllers.ProductsController.CreateProduct (Products) in 320.3091ms
+2025-02-07 11:11:40.994 +05:30 [INF] Executed endpoint 'Products.Controllers.ProductsController.CreateProduct (Products)'
+2025-02-07 11:11:40.995 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44398/api/Products - 201 null application/json; charset=utf-8 338.5561ms
