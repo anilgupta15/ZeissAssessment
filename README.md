@@ -1,3 +1,40 @@
+'''Products/
+'''│-- Products (Main API Project)
+'''│   │-- Controllers/
+'''│   │   │-- ProductsController.cs
+'''│   │-- Middleware/
+'''│   │   │-- ExceptionHandlingMiddleware.cs
+'''│   │-- Program.cs
+'''│   │-- appsettings.json
+'''│
+'''│-- Products.Application (Business Logic Layer)
+'''│   │-- Interfaces/
+'''│   │   │-- ICacheService.cs
+'''│   │   │-- IProductRepository.cs
+'''│   │   │-- IProductService.cs
+'''│   │-- Services/
+'''│   │   │-- ProductService.cs
+'''│   │-- Utilities/
+'''│   │   │-- MappingProfile.cs
+'''│
+'''│-- Products.Infrastructure (Data Access Layer)
+'''│   │-- Repositories/
+'''│   │-- Services/
+'''│
+'''│-- Products.Domain (Core Entities and Models)
+'''│   │-- Entities/
+'''│   │-- DTOs/
+'''│
+'''│-- Products.Database (Persistence Layer)
+'''│   │-- DataContext/
+'''│   │   │-- AppDbContext.cs
+'''│   │   │-- AppDbContextFactory.cs
+'''│   │-- Migrations/
+'''│   │   │-- 20250207042145_InitialProductMigration.cs
+'''│   │   │-- 2025020705236_UpdateColumnName.cs
+'''│
+'''│-- Products.Test (Unit and Integration Tests)
+
 **1. Products (API Layer)**
 Purpose: Acts as the entry point for handling HTTP requests and routing them to the application layer.
 
